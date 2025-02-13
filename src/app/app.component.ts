@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/pages/Register/headerRegister/header.component';
+import { FooterComponent } from './components/pages/Register/footer/footer.component';
+import { BodyRegisterComponent } from './components/pages/Register/body-register/body-register.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [HeaderComponent, FooterComponent, BodyRegisterComponent],
 })
 export class AppComponent {
   title = 'projeto';
