@@ -1,0 +1,20 @@
+
+  <div class="divRegister">
+    <h1>Register</h1>
+    <div>
+      <form (submit)="onSubmitRegister()">
+      <div class="divPlaceEmail">
+        <input type="text" placeholder="E-mail" [(ngModel)]="this.email" [ngModelOptions]="{standalone: true}"/>
+      </div>
+      <div class="divPlaceNome">
+        <input type="text" placeholder="Nome" [(ngModel)]="this.name" [ngModelOptions]="{standalone: true}"/>
+      </div>
+      <div class="divPlaceSenha">
+        <input type="password" placeholder="Senha" [(ngModel)]="this.password" [ngModelOptions]="{standalone: true}"/>
+      </div>
+      <div class="divBotao">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+    </div>
+  </div>

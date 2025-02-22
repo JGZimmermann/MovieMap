@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="filtros">
+    <div class="generos">
+      <h1>
+        Gêneros
+        <img src="../../../../../assets/filter.svg" alt="" />
+      </h1>
+    </div>
+    <div class="terror">
+      <h2>Terror</h2>
+    </div>
+    <div class="comedia">
+      <h2>Comédia</h2>
+    </div>
+    <div class="romance">
+      <h2>Romance</h2>
+    </div>
+    <div class="drama">
+      <h2>Drama</h2>
+    </div>
+    <div class="acao">
+      <h2>Ação</h2>
+    </div>
+  </div>
+  <div class="filmes">
+    <form (submit)="onSubmit()">
+      <input type="text" placeholder="Filme" [(ngModel)]="this.filme" [ngModelOptions]="{standalone: true}" />
+      <button type="submit">Enviar</button>  
+      <button routerLink="search">Pesquisa</button>
+    </form>
+  </div>
+</div>

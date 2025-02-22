@@ -1,0 +1,54 @@
+.perfil {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 100px;
+  padding-bottom: 181px;
+}
+
+.perfilH1 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 400px;
+}
+
+.perfilEsquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 90px;
+}
+
+.perfilEsquerda .profileIcon img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.perfilEsquerda .buttonEsquerda {
+  padding-top: 40px;
+  padding-left: 60px;
+}
+
+.perfilEsquerda .buttonEsquerda button {
+  background-color: red;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.perfilEsquerda .buttonEsquerda button:hover {
+  background-color: white;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.dadosPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 40px;
+  margin-left: 20px;
+}
