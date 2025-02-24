@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './body-perfil.component.css'
 })
 export class BodyPerfilComponent {
-  
+  user : any = localStorage.getItem('name')
+  id : any = localStorage.getItem('id')
+  email : any = localStorage.getItem('user')
+  password : any = localStorage.getItem('password')
 }

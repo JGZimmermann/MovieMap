@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
-import { log } from 'console';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +11,7 @@ import { log } from 'console';
   styleUrl: './login.component.css',
 })
 export class BodyLoginComponent implements OnInit {
+  constructor(private router: Router) {}
   userData: any;
   users: any;
   url: string = 'http://localhost:3000/users';
@@ -23,21 +24,18 @@ export class BodyLoginComponent implements OnInit {
   }
   user: String = '';
   password: String = '';
-  logged: Boolean = false;
   onSubmit() {
     this.users = Object.values(this.userData);
     this.users.forEach((user: any) => {
       if (this.user == user.email && this.password == user.password) {
-        this.logged = true;
-        console.log(user.id);
+        localStorage.setItem("id",user.id)
+        localStorage.setItem("name",user.name)
+        localStorage.setItem("user",user.email)
+        localStorage.setItem("password",user.password)
+        this.router.navigate(['/']);
       } else {
         return;
       }
     });
-    if (this.logged == true) {
-      alert('Login concluído!');
-    } else {
-      alert('Usuário ou senha incorretos...');
-    }
   }
 }
