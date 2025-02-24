@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Douglas",
+      "email": "douglas@tahech.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "Emanuel",
+      "email": "emanuel@k13.com",
+      "password": "123"
+    },
+    {
+      "id": "98d2",
+      "name": "Jose",
+      "email": "jose@tahech.com",
+      "password": "123"
+    },
+    {
+      "id": "3b41",
+      "name": "teste",
+      "email": "teste@teste.com",
+      "password": "123"
+    }
+  ]
+}

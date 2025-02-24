@@ -1,0 +1,8 @@
+<h1>Filmes</h1>
+<div class="filme-container">
+  <div class="filme-card" *ngFor="let filme of filmes">
+    <img [src]="filme.Poster" [alt]="filme.Title" />
+    <p>{{ filme.Title }}</p>
+    <p class="year">{{ filme.Year }}</p>
+  </div>
+</div>
