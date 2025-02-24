@@ -9,24 +9,34 @@ import { Observable } from 'rxjs';
   standalone: true,
   imports: [FormsModule, HttpClientModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
 })
 export class BodyRegisterComponent {
-email: String = "";
-name: String = "";
-password: String = "";
+  email: string = '';
+  name: string = '';
+  password: string = '';
 
+  emailPattern: string = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$'; // Regex para email
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  onSubmitRegister(){
-    const user = {
-      name : this.name,
-      email : this.email,
-      password : this.password
+  onSubmitRegister() {
+    const emailRegex = new RegExp(this.emailPattern);
+    if (!emailRegex.test(this.email)) {
+      alert('E-mail inválido!');
+      return;
     }
-    this.registerUser(user).subscribe()
+
+    console.log('Formulário enviado');
+
+    const user = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+    };
+    this.registerUser(user).subscribe();
   }
+
   registerUser(usuario: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/users', usuario);
   }
