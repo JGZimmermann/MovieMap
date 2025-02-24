@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/login",
+    "/perfil",
+    "/register",
+    "/search",
+    "/singlefilme"
+  ]
+}
