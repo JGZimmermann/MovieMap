@@ -1,0 +1,42 @@
+<!-- <body>
+  <div class="padding">
+    <div class="filmes">
+      <form>
+        <input type="text" placeholder="Filme" />
+        <button routerLink="search">Pesquisa</button>
+      </form>
+    </div>
+    <h1 class="tituloPagina">Resultado da Pesquisa</h1>
+    <div class="filme-container">
+      <div class="filme-card" *ngFor="let filme of filmes" (click)="verDetalhes(filme.imdbID)" style="cursor: pointer;">
+        <img [src]="filme.Poster" [alt]="filme.Title" />
+        <h1>{{ filme.Title }}</h1>
+        <p class="year">{{ filme.Year }}</p>
+        <p>{{filme.Type}}</p>
+      </div>
+    </div>
+  </div>
+</body> -->
+
+<body>
+
+  <div class="padding">
+    <div class="filmes">
+      <form (ngSubmit)="buscarFilmes()">
+        <input type="text" [(ngModel)]="filme" name="filme" placeholder="Filme" required />
+        <button type="submit">Pesquisa</button>
+      </form>
+    </div>
+
+    <h1 class="tituloPagina">Resultado da Pesquisa</h1>
+
+    <div class="filme-container">
+      <div class="filme-card" *ngFor="let filme of filmes" (click)="verDetalhes(filme.imdbID)" style="cursor: pointer;">
+        <img [src]="filme.Poster" [alt]="filme.Title" />
+        <h1>{{ filme.Title }}</h1>
+        <p class="year">{{ filme.Year }}</p>
+        <p>{{ filme.Type }}</p>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,34 @@
+<body>
+    <div *ngIf="filme" class="cardFilme">
+        <div class="imagemFilme">
+            <img [src]="filme.Poster" alt="Poster do filme" />
+        </div>
+
+        <div class="detalhesFilme">
+            <h2 class="titulo">
+                {{ filme.Title }}
+            </h2>
+
+            <div class="tags">
+                <span *ngFor="let genero of (filme.GenrePTBR || filme.Genre)?.split(',')">
+                    {{ genero.trim() }}
+                </span>
+            </div>
+
+            <div class="infos">
+                <span>{{ filme.Year }}</span>
+                <span>•</span>
+                <span>{{ filme.Runtime }}</span>
+            </div>
+
+            <h3>Sinopse</h3>
+            <p class="sinopse">{{ filme.PlotPTBR || filme.Plot }}</p>
+
+            <h3>Elenco</h3>
+            <p>{{ filme.Actors }}</p>
+
+            <h3>Diretor</h3>
+            <p>{{ filme.Director }}</p>
+        </div>
+    </div>
+</body>

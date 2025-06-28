@@ -1,0 +1,27 @@
+<body>
+  <div class="padding">
+    <div class="divRegister">
+      <h1>Register</h1>
+      <div>
+        <form #registerForm="ngForm" (submit)="onSubmitRegister()" novalidate>
+          <div class="divPlaceEmail">
+            <input type="text" placeholder="E-mail" [(ngModel)]="email" name="email" [pattern]="emailPattern"
+              required />
+          </div>
+          <div class="divPlaceNome">
+            <input type="text" placeholder="Nome" [(ngModel)]="name" name="name" required />
+          </div>
+          <div class="divPlaceSenha">
+            <input type="password" placeholder="Senha" [(ngModel)]="password" name="password" required />
+          </div>
+          <div class="divBotao">
+            <button type="submit" [disabled]="!registerForm.valid">Enviar</button>
+          </div>
+        </form>
+        <div>
+          <p>Ja tem Login?<a routerLink="/login"> Voltar para o login</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

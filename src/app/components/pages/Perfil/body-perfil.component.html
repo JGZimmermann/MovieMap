@@ -1,0 +1,26 @@
+<body>
+  <div class="perfil">
+    <div class="perfilEsquerda">
+      <div class="profileIcon">
+        <img src="../../../../../assets/perfilSemBack.png" alt="" />
+      </div>
+      <div class="buttonEsquerda">
+
+        <button class="btn btn-primary" (click)="logout()">Sair</button>
+      </div>
+    </div>
+    <div class="perfilH1">
+      <h1>Perfil</h1>
+    </div>
+    <div class="dadosPerfil">
+      <div class="dadosPerfilH2">
+        <h2>Nome de Usuario</h2>
+        <p>{{user}}</p>
+      </div>
+      <div class="dadosPerfilEmail">
+        <h2>E-mail cadastrado</h2>
+        <p>{{email}}</p>
+      </div>
+    </div>
+  </div>
+</body>

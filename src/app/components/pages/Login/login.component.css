@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #141e30, #0f0f0f);
+  min-height: 84.4vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  min-width: 944px;
+  margin-bottom: 11px;
+}
+
+
+.divRegister {
+  background-color: black;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px black;
+  width: 100%;
+  max-width: 400px;
+  min-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+
+.divRegister h1 {
+  color: white;
+  padding: 6px;
+}
+
+
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #272727;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #474747;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2a2a2a;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+
+.divRegister p {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.divRegister a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.divRegister a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .divRegister {
+    padding: 1.5rem 1rem;
+  }
+}
