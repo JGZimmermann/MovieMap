@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateService } from './translate.service'; // ajuste o caminho conforme seu projeto
+import { TranslateService } from './translate.service';
 
 @Component({
   selector: 'app-detalhes',
@@ -28,7 +28,6 @@ export class DetalhesComponent implements OnInit {
         .subscribe(async (detalhes: any) => {
           this.filme = detalhes;
 
-          // Tradução dos campos principais
           this.filme.TitlePTBR = await this.translateService.translate(detalhes.Title);
           this.filme.GenrePTBR = await this.translateService.translate(detalhes.Genre);
           this.filme.PlotPTBR = await this.translateService.translate(detalhes.Plot);

@@ -16,13 +16,15 @@ export class BodyPerfilComponent {
   constructor(private router: Router) { }
 
   logout() {
-    // Limpar os dados do localStorage
+
     localStorage.removeItem('name');
     localStorage.removeItem('id');
     localStorage.removeItem('user');
     localStorage.removeItem('password');
+    localStorage.removeItem("isLogged")
 
-    // Redirecionar para a página de login
-    this.router.navigate(['/login']);
+    window.dispatchEvent(new Event('userLoggedOut'));
+
+    this.router.navigate(['/login'])
   }
 }

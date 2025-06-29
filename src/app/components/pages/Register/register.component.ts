@@ -106,7 +106,6 @@ export class BodyRegisterComponent {
       return;
     }
 
-    // Verificar se já existe usuário com esse email
     const { data: existingUser, error: errorCheck } = await supabase
       .from('users')
       .select('id')
@@ -123,12 +122,11 @@ export class BodyRegisterComponent {
       return;
     }
 
-    // Criar usuário
     const { data, error } = await supabase.from('users').insert([
       {
         name: this.name,
         email: this.email,
-        password: this.password, // ideal: criptografar a senha antes de salvar
+        password: this.password,
       },
     ]);
 

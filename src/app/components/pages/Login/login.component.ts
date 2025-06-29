@@ -120,8 +120,13 @@ export class BodyLoginComponent {
     localStorage.setItem('id', foundUser.id);
     localStorage.setItem('name', foundUser.name);
     localStorage.setItem('user', foundUser.email);
+    localStorage.setItem("isLogged", "true")
+
+    window.dispatchEvent(new Event('userLoggedIn'));
+
     alert('Login concluído!');
     this.router.navigate(['/search']);
+
   }
 }
 

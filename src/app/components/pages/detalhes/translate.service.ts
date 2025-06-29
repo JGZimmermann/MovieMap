@@ -1,23 +1,3 @@
-
-// import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-
-// @Injectable({ providedIn: 'root' })
-// export class TranslateService {
-//     private apiUrl = 'https://libretranslate.com/translate';
-
-//     constructor(private http: HttpClient) { }
-
-//     translate(text: string, targetLang: string = 'pt'): Promise<string> {
-//         return this.http.post<any>(this.apiUrl, {
-//             q: text,
-//             source: 'en',
-//             target: targetLang,
-//             format: 'text'
-//         }).toPromise().then(res => res.translatedText);
-//     }
-// }
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
