@@ -12,6 +12,16 @@ export const routes: Routes = [
     { path: "login", component: BodyLoginComponent },
     { path: "register", component: BodyRegisterComponent },
     { path: "perfil", component: BodyPerfilComponent, canActivate: [AuthGuard] },
-    { path: "search", component: SearchComponent, canActivate: [AuthGuard] },
-    { path: 'detalhes/:id', component: DetalhesComponent, canActivate: [AuthGuard] }
+    {
+        path: 'search',
+        component: SearchComponent,
+        canActivate: [AuthGuard],
+        children: [
+            {
+                path: ':id',
+                component: DetalhesComponent,
+                canActivate: [AuthGuard]
+            }
+        ]
+    }
 ]
