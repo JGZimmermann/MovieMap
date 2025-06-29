@@ -2,6 +2,7 @@
 
  - Link para o protótipo: https://www.figma.com/design/0otv6ZUM9BmF5bIsOGquWW/MovieMap?node-id=0-1&t=CMUkGpQPU1nE0wS7-1
  - Link para a aplicação: https://jgzimmermann.github.io/MovieMap/
+ - Link para apresentação do sistema: https://youtu.be/AamkfEyDKdY
 
 ## Checklist
 
